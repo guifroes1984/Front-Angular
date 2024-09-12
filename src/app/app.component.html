@@ -1,36 +1,19 @@
-<!-- <form>
-
-  <div class="form-group">
-    <h3 class="text-center">Login</h3>
-  </div>
-
-  <div class="form-group">
-    <label for="usuario">E-mail:</label>
-    <input type="email" class="form-control" id="usuario" placeholder="Informe o Usuário">
-  </div>
-  <div class="form-group">
-    <label for="senha">Senha</label>
-    <input type="password" class="form-control" id="senha" placeholder="Informe a Senha">
-  </div>
-  <button type="button" class="btn btn-primary">Acessar</button>
-</form> -->
-
 <form aria-labelledby="login-title" class="login-form mx-auto p-4 max-width-400">
   <div class="form-group text-center mb-4">
     <h3 class="font-weight-bold">Login</h3>
   </div>
 
   <div class="form-group mb-3">
-    <label for="usuario">E-mail:</label>
-    <input type="email" class="form-control" id="usuario" placeholder="Informe o Usuário" required>
+    <label for="login">E-mail:</label>
+    <input type="email" class="form-control" [(ngModel)]="usuario.login" id="login" name="login" placeholder="Informe o Usuário" required>
   </div>
 
   <div class="form-group mb-4">
     <label for="senha">Senha</label>
-    <input type="password" class="form-control" id="senha" placeholder="Informe a Senha" required>
+    <input type="password" class="form-control" [(ngModel)]="usuario.senha" id="senha" name="senha" placeholder="Informe a Senha" required>
   </div>
 
   <div class="text-center">
-    <button type="submit" class="btn btn-primary btn-lg w-100">Acessar</button>
+    <button type="submit" class="btn btn-primary btn-lg w-100" (click)="login()">Acessar</button>
   </div>
 </form>
